@@ -1,11 +1,11 @@
 import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 $(document).ready(function () {
-	const firework = new Audio('../assets/new-year-fireworks-sound4-180205.mp3');
+	const firework = new Audio('/assets/new-year-fireworks-sound4-180205.mp3');
 	firework.onerror = function () {
 		console.error('Error loading firework sound.');
 	};
-	const win = new Audio('../assets/piglevelwin2mp3-14800.mp3');
+	const win = new Audio('./assets/piglevelwin2mp3-14800.mp3');
 	win.onerror = function () {
 		console.error('Error loading win sound.');
 	};
@@ -101,12 +101,12 @@ $(document).ready(function () {
 	});
 
 	const original = generateRandomArray();
-	const woosh = new Audio('../assets/whoosh-6316.mp3');
+	const woosh = new Audio('/assets/whoosh-6316.mp3');
 	woosh.onerror = function () {
 		console.error('Error loading woosh sound.');
 	};
 	woosh.volume = 0.5;
-	const click = new Audio('../assets/shooting-sound-fx-159024.mp3');
+	const click = new Audio('/assets/shooting-sound-fx-159024.mp3');
 	click.onerror = function () {
 		console.error('Error loading shooting sound.');
 	};
