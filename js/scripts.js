@@ -1,11 +1,11 @@
 import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 $(document).ready(function () {
-	const firework = new Audio('/assets/new-year-fireworks-sound4-180205.mp3');
+	const firework = new Audio('assets/new-year-fireworks-sound4-180205.mp3');
 	firework.onerror = function () {
 		console.error('Error loading firework sound.');
 	};
-	const win = new Audio('./assets/piglevelwin2mp3-14800.mp3');
+	const win = new Audio('assets/piglevelwin2mp3-14800.mp3');
 	win.onerror = function () {
 		console.error('Error loading win sound.');
 	};
