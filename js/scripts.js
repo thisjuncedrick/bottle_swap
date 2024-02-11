@@ -101,12 +101,12 @@ $(document).ready(function () {
 	});
 
 	const original = generateRandomArray();
-	const woosh = new Audio('/assets/whoosh-6316.mp3');
+	const woosh = new Audio('assets/whoosh-6316.mp3');
 	woosh.onerror = function () {
 		console.error('Error loading woosh sound.');
 	};
 	woosh.volume = 0.5;
-	const click = new Audio('/assets/shooting-sound-fx-159024.mp3');
+	const click = new Audio('assets/shooting-sound-fx-159024.mp3');
 	click.onerror = function () {
 		console.error('Error loading shooting sound.');
 	};
