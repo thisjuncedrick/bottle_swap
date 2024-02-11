@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f8f9fa;
+	font-family: 'Protest Riot', Arial, Helvetica, sans-serif;
+	overflow: hidden;
+}
+
+.background {
+	background-color: #e5e5f7;
+	opacity: 0.3;
+	background-image: radial-gradient(#444cf7 1.25px, #e5e5f7 1.25px);
+	background-size: 25px 25px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -999;
+}
+.custom_loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+}
+
+/* Credits to https://www.cssportal.com/css-loader-generator/ */
+.shapes {
+	width: 67.19999999999999px;
+	height: 67.19999999999999px;
+	color: var(--bs-primary);
+	background: linear-gradient(currentColor 0 0) left 22.4px top 0,
+		linear-gradient(currentColor 0 0) top 22.4px right 0,
+		linear-gradient(currentColor 0 0) right 22.4px bottom 0,
+		linear-gradient(currentColor 0 0) bottom 22.4px left 0;
+	background-size: calc(100% / 3) calc(100% / 3);
+	background-repeat: no-repeat;
+	animation: shapes-dqf486 0.375s infinite alternate linear,
+		shapes-g0d60l 0.75s infinite;
+}
+
+@keyframes shapes-dqf486 {
+	90%,
+	100% {
+		background-size: calc(2 * 100% / 3) calc(100% / 3),
+			calc(100% / 3) calc(2 * 100% / 3);
+	}
+}
+
+@keyframes shapes-g0d60l {
+	0%,
+	49.99% {
+		transform: scaleX(1);
+	}
+
+	50%,
+	100% {
+		transform: scaleX(-1);
+	}
+}
+
+#bottleRow {
+	width: 100%;
+	position: relative;
+}
+
+.bottle {
+	width: 17%;
+	position: absolute;
+	left: var(--left);
+	transition: left 0.2s ease-out;
+	cursor: pointer;
+}
+
+.bottle img {
+	filter: hue-rotate(var(--hue));
+	transition: transform 0.2s ease-out;
+}
+
+.bottle:not(.selected) img:hover {
+	transform: scale(1.07);
+}
+
+.bottle:not(.selected) img:active,
+.bottle.selected img:active {
+	transform: scale(1);
+}
+
+.bottle.selected {
+	transform: scale(1.07);
+}
